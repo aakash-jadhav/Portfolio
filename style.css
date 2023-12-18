@@ -111,7 +111,7 @@ a span {
     left: 50%;
   }
   .card {
-    height: 100vh;
+    height: 100dvh;
     margin: 0;
   }
   .card-text {
