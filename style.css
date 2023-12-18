@@ -8,7 +8,6 @@
 .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Define two columns */
-  /* grid-gap: 1em; Add spacing between cards */
   width: 100%; /* Take up the entire width of the viewport */
   height: 100dvh; /* Take up the entire height of the viewport */
   align-items: center; /* Center the cards vertically */
