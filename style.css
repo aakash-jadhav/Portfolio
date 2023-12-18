@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Define two columns */
+  /* grid-gap: 1em; Add spacing between cards */
+  width: 100%; /* Take up the entire width of the viewport */
+  height: 100dvh; /* Take up the entire height of the viewport */
+  align-items: center; /* Center the cards vertically */
+  justify-content: center; /* Center the cards horizontally */
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.card {
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 45dvh;
+  margin: 1em 1em;
+  overflow: hidden;
+  color: #eee;
+  scroll-snap-align: start;
+  opacity: 90%;
+  transition: all 0.3s ease-in-out;
+}
+.card:hover {
+  opacity: 100%;
+  transform: scale(1.03);
+  overflow: hidden;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.card-text {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 1em;
+}
+.circle {
+  background-color: #fff;
+  clip-path: circle(50% at 50% 50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 125px;
+  height: 125px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.circle:hover {
+  width: 150px;
+  height: 150px;
+}
+
+.circle span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+a span {
+  color: black;
+}
+
+.right {
+  float: right;
+}
+.truncate {
+  text-overflow: ellipsis;
+}
+.contact {
+  background-color: #ff1d5a;
+}
+.project {
+  background-color: #ffda18;
+  color: #333;
+}
+.project h2 {
+  color: black;
+}
+
+.education {
+  background-color: #0049b7;
+}
+
+.experience {
+  background-color: rgb(36, 164, 138);
+}
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; /* Change to a single column */
+  }
+  .circle {
+    display: sticky;
+    top: 85%;
+    left: 50%;
+  }
+  .card {
+    height: 100vh;
+    margin: 0;
+  }
+  .card-text {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .card-text {
+    font-size: larger;
+  }
+}
